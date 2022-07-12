@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body data-body>
+  <body data-body> 
     <!-- Шапка профиля -->
       <header class="header">
         
@@ -81,12 +81,90 @@
          
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button class="modal-close-btn" type="button" 
-            data-modal-close>
-              <svg width="11px" height="11px">
-               <use href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
+            <div class="modal-close-container">
+              <button class="modal-close-btn" type="button" data-modal-close>
+                <svg class="icon-modal-close" width="11px" height="11px">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            
+
+            <form>
+
+              <strong class="modal-title">Оставьте свои данные, мы вам перезвоним</strong>
+               
+              
+              <label class="form-label">
+                <span class="label-title">Имя</span>
+                <div class="form-modal-container">
+                  <input 
+                    class="modal-input"
+                    type="text"
+                    name="name"
+                  >
+  
+                  <svg class="modal-icon" width="12" height="12">
+                    <use href="./images/icons.svg#icon-name"></use>
+                  </svg>
+                </div>
+              </label>
+                
+                
+              
+
+              <label class="form-label">
+                <span class="label-title">Телефон</span>
+                <div class="form-modal-container">
+                  <input 
+                   class="modal-input"
+                   type="tel"
+                   name="number"
+                  >
+
+                  <svg class="modal-icon" width="13" height="13">
+                   <use href="./images/icons.svg#icon-number"></use>
+                  </svg>
+                </div>
+              </label>
+
+              <label class="form-label">
+                <span class="label-title">Почта</span>
+                <div class="form-modal-container">
+                  <input 
+                   class="modal-input"
+                   type="email"
+                   name="e-mail"
+                  >
+
+                  <svg class="modal-icon" width="15" height="12">
+                    <use href="./images/icons.svg#icon-post"></use>
+                  </svg>
+                </div>
+              </label>
+
+              <label class="form-label">
+                <span class="label-title">Комментарий</span>
+                <div class="form-modal-container">
+                  <textarea class="modal-input coment-input" name="coment" placeholder="Введите текст"></textarea>
+                </div>
+              </label>
+
+              <label>
+                <div class="agreement-container">
+                  <input class="agree-checkbox" type="checkbox" name="agreement">
+                  <svg class="agreement-icon" width="16" height="15">
+                   <use href="./images/icons.svg#icon-agreement"></use>
+                  </svg>
+                  <span class="agreement-title">Соглашаюсь с рассылкой и принимаю <a class="agreement-link" href="">Условия договора</a></span>
+                </div>
+                
+              </label>
+
+              <div class="modal-btn-container">
+                <button class="model-btn" type="submit">Отправить</button>
+              </div>
+            </form>
           </div>
         </div>
         
@@ -527,28 +605,24 @@
           </ul>
         </div>
   
-        <form>
-          <div class="footer-input-container">
-            <label>
-              <strong class="footer-input-title">Подпишитесь на рассылку</strong>
+        <form class="form-footer">
+          <label>
+            <strong class="footer-input-title">Подпишитесь на рассылку</strong>
 
-              <input 
-                class="footer-input"
-                type="email"
-                name="footer-mail"
-                placeholder="E-mail"
-              >
+            <input 
+              class="footer-input"
+              type="email"
+              name="footer-mail"
+              placeholder="E-mail"
+            >
             
-              <button class="footer-button" type="submit">Подписаться
-                <svg class="footer-form-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
+            <button class="footer-button" type="submit">Подписаться
+              <svg class="footer-form-icon" width="24" height="24">
+               <use href="./images/icons.svg#icon-send"></use>
               </svg>
-              </button>
+            </button>
           
-              
-
-            </label>
-          </div>
+          </label>
         </form>
           
       </div>

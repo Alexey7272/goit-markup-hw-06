@@ -287,10 +287,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 
     opacity: 1;
     visibility: visible;
-    pointer-events: initial;
+    background: rgba(0, 0, 0, 0.2);
 
     transition: opacity var(--anim), visibility var(--anim);
 }
@@ -303,18 +308,17 @@ body {
 
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    margin: auto;
+    padding: 40px 40px;
 
-    transform: translate(-50%, -50%);
-
-    min-width: 528px;
-    min-height: 581px;
+    max-width: 528px;
+    width: 100%;
 
     background-color: #fff;
 
     border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }  
 
 .modal-close-btn {
@@ -333,8 +337,165 @@ body {
     border-radius: 50%;
     background-color: var(--title-text-color);
     cursor: pointer;
+    transition: var(--anim);
 }
 
+.modal-close-container:hover{
+    fill: var(--accent-color);
+}
+
+
+.modal-title {
+    display: block;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+}
+
+.label-title {
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-top: 12px;
+
+    color: var(--text-color);
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: var(--anim);
+}
+
+.modal-input:hover {
+    border-color: var(--accent-color);
+}
+
+.form-modal-container {
+    position: relative;
+    margin-top: 4px;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px; 
+    transition: var(--anim);
+}
+
+.modal-input:hover + .modal-icon {
+    fill: var(--accent-color);
+}
+
+.coment-input {
+    height: 120px;
+    padding-left: 16px;
+    padding-top: 12px;
+    resize: none;
+}
+
+.agreement-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agreement-title {
+    margin-left: 7px;
+
+    font-family: 'Roboto'; 
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;  
+
+    color: var(--text-color);
+}
+
+.agreement-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    
+    color: var(--accent-color);
+}
+
+.agreement-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.agree-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.agree-checkbox:checked + .agreement-icon {
+    background-color: var(--accent-color);
+    
+    border: var(--accent-color);
+    background-size: contain;
+}
+
+.modal-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+
+    color: var(--title-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;  
+    cursor: pointer;
+    transition: var(--anim);
+}
+
+.model-btn:hover {
+    background-color: #188CE8;
+}
 
 /* Особенности компании */
 
@@ -701,8 +862,8 @@ background-color:var(--second-background-color);
     margin-right: 10px;
 }
 
-.footer-input-container {
-    margin-left: 93px;
+.form-footer {
+    margin-left: auto;
 }
 
 .footer-input-title {
@@ -735,6 +896,7 @@ background-color:var(--second-background-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-left: 12px;
     width: 200px;
     height: 50px;
 
