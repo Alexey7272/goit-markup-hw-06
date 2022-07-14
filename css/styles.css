@@ -309,14 +309,10 @@ body {
 
 .modal {
     position: relative;
-    margin: auto;
     padding: 40px 40px;
-
     max-width: 528px;
-    width: 100%;
 
     background-color: #fff;
-
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }  
@@ -377,12 +373,15 @@ body {
     height: 40px;
     padding-left: 42px;
 
+    outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: var(--anim);
+
 }
 
-.modal-input:hover {
+.modal-input:hover,
+.modal-input:focus {
     border-color: var(--accent-color);
 }
 
@@ -399,7 +398,8 @@ body {
     transition: var(--anim);
 }
 
-.modal-input:hover + .modal-icon {
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
     fill: var(--accent-color);
 }
 
